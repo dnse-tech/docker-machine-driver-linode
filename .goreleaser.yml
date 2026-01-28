@@ -12,6 +12,20 @@ builds:
       - linux
       - darwin
       - windows
+    goarch:
+      - amd64
+      - arm64
+      - "386"
+      - s390x
+    ignore:
+      - goos: darwin
+        goarch: "386"
+      - goos: darwin
+        goarch: s390x
+      - goos: windows
+        goarch: arm64
+      - goos: windows
+        goarch: s390x
 archives:
   - id: linode-docker-machine-archives
     format: zip
